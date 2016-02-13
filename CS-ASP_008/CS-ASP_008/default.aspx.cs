@@ -13,5 +13,36 @@ namespace CS_ASP_008
         {
 
         }
+
+        protected void goButton_Click(object sender, EventArgs e)
+        {
+            // int i;
+            // i = "3";
+
+            /*
+            int i = 2000000000;
+            long j = i;
+            */
+
+            /*
+            long i = 2000000000;
+            int j = (int)i;
+            */
+
+            /*
+            double k = 2.5;
+            int j = (int)k;
+
+            //resultLabel.Text = j;
+            //resultLabel.Text = (string)j;
+            resultLabel.Text = j.ToString();
+            */
+
+            string i = inputTextBox.Text;
+            int j = int.Parse(i);
+            int k = j + 1;
+
+            resultLabel.Text = k.ToString();
+        }
     }
 }
