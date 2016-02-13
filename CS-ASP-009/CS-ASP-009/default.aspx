@@ -13,10 +13,10 @@
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Button" />
+        <asp:Button ID="goButton" runat="server" OnClick="goButton_Click" Text="Go" />
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="resultLabel" runat="server" Text="resultLabel"></asp:Label>
     
     </div>
     </form>
