@@ -16,7 +16,7 @@ bool => true or false (defaults to false)
 More: http://is.gd/data_types
 
 
-Data Type Coversion (CS-ASP_008) 
+Data Type Conversion (CS-ASP_008) 
 ================================
 
 Implicit Conversion - smaller type to larger type
