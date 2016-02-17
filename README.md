@@ -90,4 +90,47 @@ WhiteSpace is ignored (use for humans)
 
 
 
+Conditional if ... else if ... else Statement (CS-ASP_011)
+==========================================================
+
+= Assignment
+== Equality
+
+if (a == b)
+{
+  //execute when the expression is true
+}
+else 
+{
+  //executes when the expression is false;
+}
+
+... or ... evaluate other mutally exclusivesly options:
+
+if (a==b) {// some code}
+else if (a == c) {// some code}
+else if (a == d) {//some code}
+else {// catch all}
+
+Checkbox Server Control = Checked prop is bool
+
+RadioButton Server Control = GroupName prop groups 
+them together, check prop is bool
+
+
+Conditional Ternary Operator (CS-ASP_012)
+=========================================
+
+Shortcut for evaluating an expression and returning
+a result
+result = (a == b) ? "Equal"  :  "Not Equal";
+
+
+
+
+
+
+
+
+
 
