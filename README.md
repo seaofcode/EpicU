@@ -64,7 +64,26 @@ checked
   // that could potentially overflow
 }
 
+C# Syntax (CS-ASP_010)
+======================
 
+Operands - variable names / server control names, literals - "Nouns" (you name these)
+
+Operators - "Verbs ... they act on the operands"
+
+http://is.gd/operators
+
+Expressions - One or more operands and zero or more operators that evaluate to a single value.
+
+http://is.gd/expressions
+
+Statements - A complete instruction - assignment of an 
+expression to a variable, an increment / decrement, ect.
+
+http://is.gd/statement
+
+Statements must end in a semi-colon ;
+WhiteSpace is ignored (use for humans)
 
 
 
