@@ -13,5 +13,18 @@ namespace CS_ASP_012
         {
 
         }
+
+        protected void goButton_Click(object sender, EventArgs e)
+        {
+            //resultLabel.Text = (firstTextBox.Text == secondTextBox.Text) ? "Yes" : "No";
+
+            /*
+            resultLabel.Text = (oldCheckBox.Checked) ? "I'm teaching an old dog new tricks!"
+                : "Young whipper snapper get off my lawn";
+            */
+
+            int result = (firstTextBox.Text == secondTextBox.Text) ? 100 : 50;
+            resultLabel.Text = result.ToString();
+        }
     }
 }
