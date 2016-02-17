@@ -34,7 +34,7 @@ namespace ChallengeSimpleCalculator
 
         protected void divideButton_Click(object sender, EventArgs e)
         {
-            int result = int.Parse(firstTextBox.Text) / int.Parse(secondTextBox.Text);
+            double result = double.Parse(firstTextBox.Text) / double.Parse(secondTextBox.Text);
             resultLabel.Text = result.ToString();
         }
     }
