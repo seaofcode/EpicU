@@ -126,7 +126,23 @@ a result
 result = (a == b) ? "Equal"  :  "Not Equal";
 
 
+Comparison and Logical Operator (CS-ASP_103)
+============================================
 
+Comparison Operators used for conditional statements
+==
+!=
+< > 
+<= =>
+!someBooleanValue - means NOT is true
+
+Logical Operators
+used to combine multiple expressions / evaluation
+
+&& - AND
+|| - OR
+
+Combine with paraenthesis  ( ) for order of precedence
 
 
 
