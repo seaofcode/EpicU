@@ -1,5 +1,8 @@
 # EpicU3-MattPearson
 
+Challenge Sites:
+http://392-matt.vm.epicservers.com/calc/
+
 Data Types (CS-ASP_007)
 =======================
 
