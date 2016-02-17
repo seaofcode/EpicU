@@ -118,7 +118,12 @@ RadioButton Server Control = GroupName prop groups
 them together, check prop is bool
 
 
+Conditional Ternary Operator (CS-ASP_012)
+=========================================
 
+Shortcut for evaluating an expression and returning
+a result
+result = (a == b) ? "Equal"  :  "Not Equal";
 
 
 
