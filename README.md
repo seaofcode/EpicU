@@ -131,9 +131,13 @@ Comparison and Logical Operator (CS-ASP_103)
 
 Comparison Operators used for conditional statements
 ==
+
 !=
-< > 
+
+< >
+
 <= =>
+
 !someBooleanValue - means NOT is true
 
 Logical Operators
