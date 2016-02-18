@@ -94,12 +94,14 @@ Conditional if ... else if ... else Statement (CS-ASP_011)
 ==========================================================
 
 = Assignment
+
 == Equality
 
 if (a == b)
 {
   //execute when the expression is true
 }
+
 else 
 {
   //executes when the expression is false;
@@ -108,21 +110,25 @@ else
 ... or ... evaluate other mutally exclusivesly options:
 
 if (a==b) {// some code}
+
 else if (a == c) {// some code}
+
 else if (a == d) {//some code}
+
 else {// catch all}
 
 Checkbox Server Control = Checked prop is bool
 
 RadioButton Server Control = GroupName prop groups 
+
 them together, check prop is bool
 
 
 Conditional Ternary Operator (CS-ASP_012)
 =========================================
 
-Shortcut for evaluating an expression and returning
-a result
+Shortcut for evaluating an expression and returning a result
+
 result = (a == b) ? "Equal"  :  "Not Equal";
 
 
@@ -130,6 +136,7 @@ Comparison and Logical Operator (CS-ASP_103)
 ============================================
 
 Comparison Operators used for conditional statements
+
 ==
 
 !=
@@ -141,9 +148,11 @@ Comparison Operators used for conditional statements
 !someBooleanValue - means NOT is true
 
 Logical Operators
+
 used to combine multiple expressions / evaluation
 
 && - AND
+
 || - OR
 
 Combine with paraenthesis  ( ) for order of precedence
