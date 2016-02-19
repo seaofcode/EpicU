@@ -58,13 +58,13 @@ namespace ChallengeFirstPapaBobsPizza {
         protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// deepDishRadioButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.RadioButton deepDishRadioButton;
         
         /// <summary>
         /// pepperoniCheckBox control.

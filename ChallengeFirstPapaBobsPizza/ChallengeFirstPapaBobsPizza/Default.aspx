@@ -45,7 +45,7 @@
         <br />
         <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Crust" Text="Thin" />
         <br />
-        <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Crust" Text="Deep Dish (+$2)" />
+        <asp:RadioButton ID="deepDishRadioButton" runat="server" GroupName="Crust" Text="Deep Dish (+$2)" />
         <br />
         <br />
         <asp:CheckBox ID="pepperoniCheckBox" runat="server" Text="Pepperoni (+$1.50)" />
@@ -63,11 +63,10 @@
         <p>
             Save $2.00 when you add Pepperoni, Green Peppers and Anchovies OR Pepperoni, Red Peppers and Onions to your pizza.</p>
         <p>
-            <asp:Button ID="totalButton" runat="server" Text="Purchase" />
+            <asp:Button ID="totalButton" runat="server" OnClick="totalButton_Click" Text="Purchase" />
         </p>
         <p>
-            Total:
-            <asp:Label ID="totalLabel" runat="server" Text="$0.00"></asp:Label>
+            Total: <asp:Label ID="totalLabel" runat="server" Text="$0.00"></asp:Label>
         </p>
     </form>
     <p>

@@ -13,5 +13,65 @@ namespace ChallengeFirstPapaBobsPizza
         {
 
         }
+
+        protected void totalButton_Click(object sender, EventArgs e)
+        {
+            double total = 0.00;
+
+            // Size Conditional Checks
+            if (babyBobSizeRadioButton.Checked)
+            {
+                total += 10.00;
+            }
+            else if (mamaBobSizeRadioButton.Checked)
+            {
+                total += 13.00;
+            }
+            else if (papaBobSizeRadioButton.Checked)
+            {
+                total += 16.00;
+            }
+
+            // Crust Type Check
+            if (deepDishRadioButton.Checked)
+            {
+                total += 2.00;
+            }
+
+            // Toppings Check
+            if (pepperoniCheckBox.Checked)
+            {
+                total += 1.50;
+            }
+            if (onionCheckBox.Checked)
+            {
+                total += 0.75;
+            }
+            if (greenPepperCheckBox.Checked)
+            {
+                total += 0.50;
+            }
+            if (redPepperCheckBox.Checked)
+            {
+                total += 0.75;
+            }
+            if (anchoviesCheckBox.Checked)
+            {
+                total += 2.00;
+            }
+
+            // Special Deal Check
+            if (pepperoniCheckBox.Checked
+                && greenPepperCheckBox.Checked
+                && anchoviesCheckBox.Checked
+                || pepperoniCheckBox.Checked
+                && redPepperCheckBox.Checked
+                && onionCheckBox.Checked)
+            {
+                total -= 2.00;
+            }
+
+            totalLabel.Text = total.ToString();
+        }
     }
 }
