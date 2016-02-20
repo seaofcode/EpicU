@@ -202,5 +202,32 @@ Chaining = using multiple helper methods together with the dot - operator
 myDateTime.AddHour(3).AddMinute(-5).ToString()
 
 
+Working with spans of time (CS-ASP_015)
+======================================
+
+Create and initialize new TimeSpans
+
+
+// Days.Hours:Minutes:Seconds.Milliseconds
+TimeSpan myTimeSpan = TimeSpan.Parse("")
+
+DateTime myBirthday = DateTime.Parse("12/7/1969");
+TimeSpan myAge = DateTime.Now.Subtract(myBirthday);
+
+// more infor
+http://is.gd/timespan
+
+get individual parts
+myAge.Hours
+myAge.Seconds
+
+...or get TOTAL elasped time
+as a double representing both
+the number of days / hours / ect
+AND fractional values representing
+"left overs"
+
+myTimeSpan.TotalDays // double
+myTimeSpan.TotalHours // double
 
 
