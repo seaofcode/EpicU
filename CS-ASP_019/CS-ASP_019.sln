@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS-ASP_019", "CS-ASP_019\CS-ASP_019.csproj", "{2955DAAF-C3A0-4114-A6F8-BFDD5E086A8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2955DAAF-C3A0-4114-A6F8-BFDD5E086A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2955DAAF-C3A0-4114-A6F8-BFDD5E086A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2955DAAF-C3A0-4114-A6F8-BFDD5E086A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2955DAAF-C3A0-4114-A6F8-BFDD5E086A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
