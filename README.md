@@ -169,7 +169,37 @@ used to combine multiple expressions / evaluation
 Combine with paraenthesis  ( ) for order of precedence
 
 
+Date Time (CS-ASP_014)
+=======================
 
+Creating new DateTime objects
+
+DateTime myDateTime = DateTime.Now;
+
+DateTime myDateTime = DateTime("12/7/1969");
+
+Formatting...many options:
+
+myDateTime.To____()
+
+Retrieving Parts:
+
+myDateTime.Year // int
+
+myDateTime.Hour // int
+
+myDateTime.DayOfWeek // "Monday"
+
+myDateTime./DayOfYear // int 175
+
+DateTime Math:
+
+myDateTime.AddHour(3)
+
+myDateTime.AddMinute(-5)
+
+Chaining = using multiple helper methods together with the dot - operator
+myDateTime.AddHour(3).AddMinute(-5).ToString()
 
 
 
