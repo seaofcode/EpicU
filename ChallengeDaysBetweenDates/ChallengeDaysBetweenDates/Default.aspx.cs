@@ -19,9 +19,18 @@ namespace ChallengeDaysBetweenDates
             DateTime startDate = startCalendar.SelectedDate;
             DateTime endDate = endCalendar.SelectedDate;
 
-            TimeSpan lengthBetweenDate = endDate.Subtract(startDate);
-
-            resultLabel.Text = lengthBetweenDate.ToString();
+            if (startDate > endDate)
+            {
+                resultLabel.Text = "You cannot subtract a greater value than a lesser value";
+            }
+            else {
+                TimeSpan lengthBetweenDate = endDate.Subtract(startDate);
+                //string formatResult = String.Format("{0:0 Days}", lengthBetweenDate);
+                resultLabel.Text = lengthBetweenDate.ToString();
+                ;
+            }
+            
+            
         }
     }
 }
