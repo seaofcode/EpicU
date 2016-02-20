@@ -16,7 +16,12 @@ namespace ChallengeDaysBetweenDates
 
         protected void okButton_Click(object sender, EventArgs e)
         {
+            DateTime startDate = startCalendar.SelectedDate;
+            DateTime endDate = endCalendar.SelectedDate;
 
+            TimeSpan lengthBetweenDate = endDate.Subtract(startDate);
+
+            resultLabel.Text = lengthBetweenDate.ToString();
         }
     }
 }
