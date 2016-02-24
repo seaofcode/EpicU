@@ -16,15 +16,33 @@ namespace CS_ASP_021
 
         protected void addButton_Click(object sender, EventArgs e)
         {
+            /*
             string[] values = new string[5];
             values[0] = TextBox1.Text;
             values[1] = TextBox2.Text;
             values[2] = TextBox3.Text;
             values[3] = TextBox4.Text;
             values[4] = TextBox5.Text;
+            */
 
-            resultLabel.Text = values[2];
+            //resultLabel.Text = values[2];
+            //resultLabel.Text = values.Length.ToString(); ;
 
+            string[] values = new string[5] { "Bob", "Andy", "Chuck", "Briand", "Steve" };
+            ViewState.Add("myValues", values);
+            resultLabel.Text = "Values add...";
+        }
+
+        protected void retrieveButton_Click(object sender, EventArgs e)
+        {
+            string[] values = (string[])ViewState["myValues"];
+            TextBox1.Text = values[0];
+            TextBox2.Text = values[1];
+            TextBox3.Text = values[2];
+            TextBox4.Text = values[3];
+            TextBox5.Text = values[4];
+
+            resultLabel.Text = "Values retrieved...";
         }
     }
 }
