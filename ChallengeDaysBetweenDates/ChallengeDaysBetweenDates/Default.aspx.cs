@@ -25,8 +25,8 @@ namespace ChallengeDaysBetweenDates
             }
             else {
                 TimeSpan lengthBetweenDate = endDate.Subtract(startDate);
-                //string formatResult = String.Format("{0:0 Days}", lengthBetweenDate);
-                resultLabel.Text = lengthBetweenDate.ToString();
+                string formatResult = String.Format("{0:0}", lengthBetweenDate.TotalDays);
+                resultLabel.Text = formatResult;
             }
         }
     }
