@@ -39,16 +39,19 @@ namespace ChallengeEpicSpiesAssignment
 
             if (daysFromPreviousAssignment >= 14)
             {
-                resultLabel.Text = "Assignment of " +
-                    spyNameTextBox.Text + " for Assignment " +
-                    assignmentNameTextBox.Text + " is Authorized " +
-                    "<br />Total Budget is : " + totalCost.ToString();
+                string result = String.Format("Assignment of {0} " +
+                    "for Assignment {1} " +
+                    "was Authorized. Budget is {2:C}", 
+                    spyNameTextBox.Text,
+                    assignmentNameTextBox.Text,
+                    totalCost); 
+                     
+                resultLabel.Text = result;
             }
             else
             {
-                resultLabel.Text = "Error: " +
-                "Start Date must be 2 weeks from Previous Assignment Date ";
-                startCalendar.SelectedDate = previousCalendar.SelectedDate.Date.AddDays(14);
+                resultLabel.Text = "Error: Start Date must be 2 weeks from Previous Assignment Date ";
+                startCalendar.SelectedDate = DateTime.Now.Date.AddDays(14);
             }
         }
     }
