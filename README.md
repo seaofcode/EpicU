@@ -21,7 +21,7 @@ http://392-matt.vm.epicservers.com/DaysBetweenDates/
 
 Epic Spy Assignment
 
-http://392-matt.vm.epicservers.com/ChallengeEpicSpiesAssignment/
+http://392-matt.vm.epicservers.com/ChallengeEpicSpiesAssignement/
 
 Data Types (CS-ASP_007)
 =======================
