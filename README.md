@@ -1,18 +1,27 @@
 # EpicU3-MattPearson
 
 Challenge Sites:
+================
 
 Calc
-=========
+
 http://392-matt.vm.epicservers.com/calc/
 
 Radio Button 
-=========
+
 http://392-matt.vm.epicservers.com/radioButtonChallenge/
 
 First Pizza Site
-================
+
 http://392-matt.vm.epicservers.com/firstPapaBobPizza/
+
+Days Between Dates
+
+http://392-matt.vm.epicservers.com/DaysBetweenDates/
+
+Epic Spy Assignment
+
+http://392-matt.vm.epicservers.com/ChallengeEpicSpiesAssignement/
 
 Data Types (CS-ASP_007)
 =======================
