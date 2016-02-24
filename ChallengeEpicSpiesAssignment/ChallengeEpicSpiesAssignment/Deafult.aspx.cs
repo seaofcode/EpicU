@@ -39,13 +39,10 @@ namespace ChallengeEpicSpiesAssignment
 
             if (daysFromPreviousAssignment >= 14)
             {
-                totalCost.ToString();
                 resultLabel.Text = "Assignment of " +
                     spyNameTextBox.Text + " for Assignment " +
                     assignmentNameTextBox.Text + " is Authorized " +
-                    "<br />Total Budget is : " + totalCost;
-               
-                    
+                    "<br />Total Budget is : " + totalCost.ToString();
             }
             else
             {
