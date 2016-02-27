@@ -17,6 +17,8 @@ namespace ChallengeEpicSpiesAssignment
                 previousCalendar.SelectedDate = DateTime.Now.Date;
                 startCalendar.SelectedDate = DateTime.Now.Date.AddDays(14);
                 endCalendar.SelectedDate = DateTime.Now.Date.AddDays(21);
+                startCalendar.VisibleDate = startCalendar.SelectedDate;
+                endCalendar.VisibleDate = endCalendar.SelectedDate;
             }
             Page.MaintainScrollPositionOnPostBack = true;
         }
@@ -32,9 +34,8 @@ namespace ChallengeEpicSpiesAssignment
             {
                 totalCost += 1000.00;              
             }
-
-            // If start Date is before end date
             
+
             // Empty Text Box Error Checking
 
             //If past assignment was 14 days ago
@@ -57,6 +58,13 @@ namespace ChallengeEpicSpiesAssignment
                 resultLabel.Text = "Error: Start Date must be 2 weeks from Previous Assignment Date ";
                 startCalendar.SelectedDate = DateTime.Now.Date.AddDays(14);
             }
+
+            // If start Date is before end date
+            if (endCalendar.SelectedDate < startCalendar.SelectedDate)
+            {
+                resultLabel.Text = "End Date cannot precede Start Date";
+            }
+
         }
     }
 }
