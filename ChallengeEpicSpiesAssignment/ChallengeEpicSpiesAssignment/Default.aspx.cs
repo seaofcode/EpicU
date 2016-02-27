@@ -34,9 +34,6 @@ namespace ChallengeEpicSpiesAssignment
             {
                 totalCost += 1000.00;              
             }
-            
-
-            // Empty Text Box Error Checking
 
             //If past assignment was 14 days ago
             TimeSpan previousAssignmentLength = startCalendar.SelectedDate.Subtract(previousCalendar.SelectedDate);
