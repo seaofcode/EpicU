@@ -297,10 +297,39 @@ Same as single dimensional ...just requires
 more indexes (in dimensions) to get to the element
 
 double[,] myArray = new double[2,3] // contains 6 elements
+
 double[,,] rubicsCube = new int[3,3,3] // contains 27 elements
 
 rubicsCube[0,1,2] = 42;
+
 myInteger = rubicsCube[0,1,2];
+
+
+Changing the Length of an Array (CS-ASP_023)
+==============================================
+
+Arrays are immutable = cannot be changed in memory
+HOWEVER, the ASP.NET Framework provides helper 
+methods to resize an array, creates a new array
+and then copies the old vaules into it.
+
+Array.Resize(ref myArray, myArray.Length + 1);
+
+// Get the Highest index:
+int highestIndex = myArray.GetUpperBound(0);
+// 0 = dimension we want to retrieve the upper boundary for
+
+// Arrays have other helper methods
+myArray.Sum();
+myArray.Min();
+myArray.Max();
+myArray.Average();
+myArray.Sort();
+myArray.Reverse();
+
+
+
+
 
 
 
