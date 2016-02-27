@@ -381,11 +381,35 @@ for (int i = 0; i < names.Length; i++)
 
 
 
+Looping with the while and do while iteration statements (CS-ASP_027)
+=====================================================================
+
+Random random = new Random();
+
+// random.Next(lowerBounds, upperBounds);
+
+random.Next(1, 100) // returns a value between 1 and 100
 
 
+// Is someExpression is already false, this will never execute
 
+while(someExpression){
 
+// Code that would affect whether
 
+// someExpression is true or false
+
+}
+
+// If someExpression is already false, this will run AT LEAST ONCE
+
+do {
+
+//Code that would affect whether
+
+// someExpression is true or false
+
+} while (someExpression)
 
 
 
