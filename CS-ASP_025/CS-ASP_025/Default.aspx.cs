@@ -16,6 +16,7 @@ namespace CS_ASP_025
 
         protected void addButton_Click(object sender, EventArgs e)
         {
+            /*
             if (firstCheckBox.Checked)
             {
                 if (secondCheckBox.Checked)
@@ -26,6 +27,20 @@ namespace CS_ASP_025
                     }
                 }
             }
+            */
+
+            /*
+            if (!firstCheckBox.Checked) return;
+            if (!secondCheckBox.Checked) return;
+            if (!thirdCheckBox.Checked) return;
+            resultLabel.Text = "They're all checked!";
+            */
+
+
+            if (firstCheckBox.Checked &&
+                secondCheckBox.Checked &&
+                thirdCheckBox.Checked)
+                resultLabel.Text = "They're all checked!";
         }
     }
 }
