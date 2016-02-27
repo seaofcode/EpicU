@@ -316,10 +316,13 @@ and then copies the old vaules into it.
 Array.Resize(ref myArray, myArray.Length + 1);
 
 // Get the Highest index:
+
 int highestIndex = myArray.GetUpperBound(0);
+
 // 0 = dimension we want to retrieve the upper boundary for
 
 // Arrays have other helper methods
+
 myArray.Sum();
 myArray.Min();
 myArray.Max();
