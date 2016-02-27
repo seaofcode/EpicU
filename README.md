@@ -331,9 +331,67 @@ myArray.Max();
 
 myArray.Average();
 
-myArray.Sort();
+Array.Sort();
 
-myArray.Reverse();
+Array.Reverse();
+
+
+Looping with the FOR Iteration Statement (CS-ASP_026)
+========================================================
+
+snippet : for (tab)(tab)
+
+Then you can tab through the replaceable bits, hit
+enter to start writing code in the code block body
+
+for (int i = 0; i < 10; i++)
+{
+// your code here
+}
+
+i - Any variable name
+
+1st part - counter declaration, can be initialized to any number
+
+2nd part - condition, can be any expression that equates to a bool
+
+3rd part - increment i++ / decrement i--, can step more than 1 using +=,
+
+string[] names = new string[] {"Wolverine", "Cyclops", "Professor X", "Phoenix"}
+
+for (int i = 0; i < names.Length; i++)
+
+{
+
+  // Can search for a specific value
+  
+  if (names[i] == "Professor X")
+  
+  {
+  
+    //Do something
+    
+    // Can break out of additional iterations if you need to
+    
+    break;
+    
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
