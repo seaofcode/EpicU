@@ -360,14 +360,23 @@ i - Any variable name
 string[] names = new string[] {"Wolverine", "Cyclops", "Professor X", "Phoenix"}
 
 for (int i = 0; i < names.Length; i++)
+
 {
+
   // Can search for a specific value
+  
   if (names[i] == "Professor X")
+  
   {
+  
     //Do something
+    
     // Can break out of additional iterations if you need to
+    
     break;
+    
   }
+  
 }
 
 
