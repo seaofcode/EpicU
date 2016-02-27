@@ -324,10 +324,15 @@ int highestIndex = myArray.GetUpperBound(0);
 // Arrays have other helper methods
 
 myArray.Sum();
+
 myArray.Min();
+
 myArray.Max();
+
 myArray.Average();
+
 myArray.Sort();
+
 myArray.Reverse();
 
 
