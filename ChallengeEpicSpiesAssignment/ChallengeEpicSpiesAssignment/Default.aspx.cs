@@ -65,6 +65,10 @@ namespace ChallengeEpicSpiesAssignment
                 resultLabel.Text = "End Date cannot precede Start Date";
             }
 
+            if (spyNameTextBox.Text == "" && assignmentNameTextBox.Text == "")
+            {
+                resultLabel.Text = "Please put in a name and assignment name";
+            }
         }
     }
 }
