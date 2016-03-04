@@ -28,21 +28,23 @@ namespace CS_ASP_023
             // Use Array.Resize();
             Array.Resize(ref hours, hours.Length + 1);
 
-            // Get the highest Index of the Array, hold it in a int var
+            // Get the last Index of the Array, hold it in a int var
             int newestItem = hours.GetUpperBound(0);
 
-            // Make highest Index equal to hoursTextBox.Text, parse into double
+            // Make last index of hours[] equal to hoursTextBox.Text, parse into double
             hours[newestItem] = double.Parse(hoursTextBox.Text);
 
-            // make ViewState "Hours" equal to hours, the resized Array
+            // Make ViewState "Hours" equal to hours, the resized Array
             ViewState["Hours"] = hours;
 
             // Print to resultLable, using String.Format along with Helper Functions, Sum, Min, Max and Average
-            resultLabel.Text = String.Format("Total Hours:{0} <br /> Most Hours:{1} <br /> Least Hours:{2} <br /> Average Hours:{3:N}",
-                                               hours.Sum(),
-                                               hours.Max(),
-                                               hours.Min(),
-                                               hours.Average());
+            resultLabel.Text = String.Format("Total Hours: {0} <br /> Most Hours: {1} <br /> Least Hours: {2} <br /> Average Hours: {3:N}",
+                                        hours.Sum(),
+                                        hours.Max(),
+                                        hours.Min(),
+                                        hours.Average());
+
+            hoursTextBox.Text = "";
         }
     }
 }
