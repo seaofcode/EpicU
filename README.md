@@ -23,6 +23,10 @@ Epic Spy Assignment
 
 http://392-matt.vm.epicservers.com/ChallengeEpicSpiesAssignement/
 
+Epic Spy Asset Tracker
+
+http://392-matt.vm.epicservers.com/ChallengeEpicSpiesAssetTracker/
+
 Data Types (CS-ASP_007)
 =======================
 
