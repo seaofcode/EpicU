@@ -27,6 +27,10 @@ Epic Spy Asset Tracker
 
 http://392-matt.vm.epicservers.com/ChallengeEpicSpiesAssetTracker/
 
+Xmen Battle Count
+
+http://392-matt.vm.epicservers.com/ChallengeForXmenBattleCount/
+
 Data Types (CS-ASP_007)
 =======================
 
