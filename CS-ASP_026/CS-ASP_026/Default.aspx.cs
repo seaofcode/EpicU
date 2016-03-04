@@ -41,11 +41,23 @@ namespace CS_ASP_026
             }
             */
 
+
+            /*
+            for (int i = 0; i < names.Length; i++)
+            {
+                result += "<br />" + names[i];
+            }
+            */
+
             string[] names = new string[] { "Wolverine", "Cyclops", "Professor X", "Phoenix" };
 
             for (int i = 0; i < names.Length; i++)
             {
-                result += "<br />" + names[i];
+                if (names[i] == "Professor X")
+                {
+                    result += String.Format("{0} is in {1} position", names[i], i );
+                    break;
+                }
             }
 
             resultLabel.Text = result;
