@@ -277,23 +277,30 @@ Single Dimensional Arrays (CS-ASP_021)
 ======================================
 
 Indexes vs Elements
+
 Accessor vs Stored Values
+
 Indexes are zero based
 
 Declaring Arrays:
+
 string[] myArray = new String[3];
 
 Declaring and Initializing Arrays:
+
 string[] myArray = new string[3] {"Moe", "Curly", "Larry"};
 
 Setting / Getting Values:
+
 string myString = myArray[1]; // Retrieve the second element
+
 myArray[0] = myString; // Sets first element
 
 
 Multidimensional Arrays (CS-ASP_022)
 ==========================================
 Same as single dimensional ...just requires
+
 more indexes (in dimensions) to get to the element
 
 double[,] myArray = new double[2,3] // contains 6 elements
