@@ -38,13 +38,11 @@ namespace CS_ASP_023
             ViewState["Hours"] = hours;
 
             // Print to resultLable, using String.Format along with Helper Functions, Sum, Min, Max and Average
-            resultLabel.Text = String.Format("Total Hours: {0} <br /> Most Hours: {1} <br /> Least Hours: {2} <br /> Average Hours: {3:N}",
-                                        hours.Sum(),
-                                        hours.Max(),
-                                        hours.Min(),
-                                        hours.Average());
-
-            hoursTextBox.Text = "";
+            resultLabel.Text = String.Format("Total Hours:{0} <br /> Most Hours: {1} <br /> Least Hours: {2} <br /> Average Hours: {3:N}",
+                                hours.Sum(),
+                                hours.Max(),
+                                hours.Min(),
+                                hours.Average());
         }
     }
 }
