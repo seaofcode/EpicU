@@ -484,7 +484,50 @@ public void MyMethod()
 
 
 
+Creating Class Files, Creating Conhesive Classes and Code Navigation
+====================================================================
 
+Prefer more classes w/ narrowly define responsibilities
+Prefer to put each class in its own file
+Prefer high cohesion - similarity / singnless of purpose of the class members
+To achieve high cohesion, a rule of thumb: try to make your classes fin on
+one screen of your IDE
+
+Understanding Object References and Object Lifetime ()
+======================================================
+
+An Object reference variable holds a reference holds a reference to an instantianed object
+in computers memory
+
+myClass myObject;
+
+More than one object refernce var can hold an address to the object in memory
+
+myClass myOtherObjectRefernce = myObject;
+
+Each time a new reference is added, the reference count increases by one, Each time
+an object reference car goes out of scope or is set to null, the reference count 
+decreases by one.
+
+If the reference count is zero the .NET framework Runtime's Garbage Collector
+removes the object from memory at an indeterminate point in time in the future.
+You can take control of the finalizatino process and even handle events just before
+the object is removed. See "deterministic finalization"
+
+Understanding the .NET Framework and Compliation 
+=================================================
+
+
+The .NET Framework consits of:
+
+- Runtime (Common Language Runtime , CLR) "protective bubble", manages memory,
+- protects the users machine, ect.
+- 
+
+.NET Framework Class Library (FCL, Base Class Library, BCL) - thousands
+of classes built by MIcrosoft for every imaginable purpose.
+
+- COmpileer 
 
 
 
