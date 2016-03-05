@@ -431,8 +431,56 @@ do {
 
 
 
+Introduction to Classes and Objects (CS-ASP_036)
+=================================================
+
+Class is a code block that defines a data type
+An Object is an instance of a Class
+Metaphors:
+Blueprint vs Houses
+Recipe vs Cupcakes
+Patterns vs BLuejeans
+Cookie cutter vs Cookies
+
+Classes have members, like Properties and Methods
+
+Properties define the attributes taht are set on 
+an instance of the class / represent the "state"
+of the ovject. You can set (assign) and get
+(retrieve) properites values on an object.
+
+Methods define actions an instance of a class
+can perform, usually on the object instance itself.
+
+You can create an instance of a class using the
+new keyword. Think "factory".
+
+You can access the memebers of an object by using
+the member access operator, the dot (.)
+
+Conceptually, classes are delagated a responsibility
 
 
+Classes are ultimately custome data types, more complex
+thatn the simple data types we've worked with.
+Therefore you can use them anywhere you use other
+data types (like as input parameters or return 
+values from a method.)
+
+class Car {
+
+}
+
+Auto Implemented Properties - simple properties
+prop tab tab enter enter
+
+this keyword - Access a memvber of the current instance
+of the class
+
+public void MyMethod()
+{
+  this.Year = 1976;
+}
 
 
 
