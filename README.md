@@ -530,4 +530,84 @@ of classes built by MIcrosoft for every imaginable purpose.
 - COmpileer 
 
 
+Understanding Namespaces and the using Directive (CS-ASP_040)
+=============================================================
+Namespaces disambiguate class names inside of class libraries of applicatinons.
+
+You must reference class name by their full name:
+
+System.Text StringBuilder sb = new System.Text.StringBuilder();
+
+....of,  you can employ a using directive at the top of the code file to
+instruct the compiler to look in those namespaces to find the class
+that is reference.
+
+using System.Text;
+
+StringBuilder sb = new StringBuilder();
+
+You must always do this if the code you're nwriting is outside of the namepace
+of the class you to use, even if it's in the same project. 
+
+Default namepsce defined in Project Properties (right-clicking on Project
+name in Solution Explorer, select Properties)
+
+
+Creating Class Libraries and Adding Reference to Assemblies (CS-ASP_041)
+========================================================================
+
+Class Library project - creates a .dll that can be refernced in other projects
+
+Add a Reference - the FCL is split into tiny pieces, and you must reference
+that assemblies that contain the parts of the library you want to use.
+
+Right-click project's References node in SOlution Explorer, select Add Reference
+
+
+Accesssibility Modifers, Fields and Properties (CS-ASP_042)
+===========================================================
+http://v.gd/access
+
+Public - Class or member can be accessed by any code
+Private - Class or member can only be accessed by parent class
+Protected - Class or member can only be accessed by parent class or derived class
+Internal - Class or member can only be accessed by code inside the same assembly
+
+CLasses are internal by default
+Methods and properties are private by default
+
+Encapsulation - hiding implementation behind public interfaces, reduces couplig
+increases plug-ability / resusability, maintainbility, ect.
+
+private fields have two purposes:
+(1) reference to object or variable that used for internal implementation of class
+(2) hold the state of an object, backing field for public property
+
+propfull [tab] [tab]
+
+private int myField
+property int MyProperty
+{
+  get { return myField }
+  set {
+    if (value > 1000)
+      myField = value;
+      else
+      // tell the caller that they can't do this
+  }
+}
+
+Full property defination and private fields to control access to private fields / state of the object.
+
+prorpg [tab] [tab]
+public int MyProperty {get; private set;}
+Restricts setting of property to just the class ' internal implementation
+
+
+
+
+
+
+
+
 
