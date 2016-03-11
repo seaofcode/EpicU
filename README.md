@@ -427,10 +427,232 @@ do {
 } while (someExpression)
 
 
+Creatug Overloaded Methods - (CS-ASP_031)
+==========================================
+Different Method Signature, but same basic function.
+Method Signature....the number and type of parameters
+Can have different return types.
+
+Creating Optional Parameters - (CS-ASP_032)
+==========================================
+Optional parameters provide default values when you define
+the method. So, if you dont supply a value, the defualt
+will be used.
+
+private void myMethod(string myRequiredParam,
+                        int myOptionalParam = 1
+                        int myOtherOptinalPara - 5);
+
+// Can be called ....
+
+myMethod("Hello Required Param!");
+
+// or ...
+
+myMethod("Hello Required Param!", 100);
+
+//...or
+
+myMethod("Hello Required Para!", 100, 500);
+
+// You cannot skip an optional parameter
+
+myMethod("Hello Required Para!", , 500); // Error
+
+Passing Named Arguments into Input Parameters (CS-ASP_033)
+===========================================================
+Allow us to send in parameter arguments OUT OF ORDER!
+We just prefix the input parameter argument with the name
+of the parameter we're passing in, a colon, then the value:
+
+myMethod(myOtherOptionalParam : 500, 
+          myRequiredParam: "Hello Required Param",
+          myOptionalParam: 100);
+
+// You still have to pass in REQUIRED Params
+
+Creating Methods with Output Parameters - CS-ASP_034
+=====================================================
+Allow you to return a value the normal way and return 
+a value via a method parameter:
+
+private bool myMethod(string myRequiredParam, out int myOptionalParam) {}
+
+int myValue = 0;
+if(myMethod("Some Required Text", out myValue)) return "Hello World";
+
+
+Introduction to Classes and Objects (CS-ASP_036)
+=================================================
+
+Class is a code block that defines a data type
+An Object is an instance of a Class
+Metaphors:
+Blueprint vs Houses
+Recipe vs Cupcakes
+Patterns vs BLuejeans
+Cookie cutter vs Cookies
+
+Classes have members, like Properties and Methods
+
+Properties define the attributes taht are set on 
+an instance of the class / represent the "state"
+of the ovject. You can set (assign) and get
+(retrieve) properites values on an object.
+
+Methods define actions an instance of a class
+can perform, usually on the object instance itself.
+
+You can create an instance of a class using the
+new keyword. Think "factory".
+
+You can access the memebers of an object by using
+the member access operator, the dot (.)
+
+Conceptually, classes are delagated a responsibility
+
+
+Classes are ultimately custome data types, more complex
+thatn the simple data types we've worked with.
+Therefore you can use them anywhere you use other
+data types (like as input parameters or return 
+values from a method.)
+
+class Car {
+
+}
+
+Auto Implemented Properties - simple properties
+prop tab tab enter enter
+
+this keyword - Access a memvber of the current instance
+of the class
+
+public void MyMethod()
+{
+  this.Year = 1976;
+}
 
 
 
+Creating Class Files, Creating Conhesive Classes and Code Navigation
+====================================================================
 
+Prefer more classes w/ narrowly define responsibilities
+Prefer to put each class in its own file
+Prefer high cohesion - similarity / singnless of purpose of the class members
+To achieve high cohesion, a rule of thumb: try to make your classes fin on
+one screen of your IDE
+
+Understanding Object References and Object Lifetime ()
+======================================================
+
+An Object reference variable holds a reference holds a reference to an instantianed object
+in computers memory
+
+myClass myObject;
+
+More than one object refernce var can hold an address to the object in memory
+
+myClass myOtherObjectRefernce = myObject;
+
+Each time a new reference is added, the reference count increases by one, Each time
+an object reference car goes out of scope or is set to null, the reference count 
+decreases by one.
+
+If the reference count is zero the .NET framework Runtime's Garbage Collector
+removes the object from memory at an indeterminate point in time in the future.
+You can take control of the finalizatino process and even handle events just before
+the object is removed. See "deterministic finalization"
+
+Understanding the .NET Framework and Compliation 
+=================================================
+
+
+The .NET Framework consits of:
+
+- Runtime (Common Language Runtime , CLR) "protective bubble", manages memory,
+- protects the users machine, ect.
+- 
+
+.NET Framework Class Library (FCL, Base Class Library, BCL) - thousands
+of classes built by MIcrosoft for every imaginable purpose.
+
+- COmpileer 
+
+
+Understanding Namespaces and the using Directive (CS-ASP_040)
+=============================================================
+Namespaces disambiguate class names inside of class libraries of applicatinons.
+
+You must reference class name by their full name:
+
+System.Text StringBuilder sb = new System.Text.StringBuilder();
+
+....of,  you can employ a using directive at the top of the code file to
+instruct the compiler to look in those namespaces to find the class
+that is reference.
+
+using System.Text;
+
+StringBuilder sb = new StringBuilder();
+
+You must always do this if the code you're nwriting is outside of the namepace
+of the class you to use, even if it's in the same project. 
+
+Default namepsce defined in Project Properties (right-clicking on Project
+name in Solution Explorer, select Properties)
+
+
+Creating Class Libraries and Adding Reference to Assemblies (CS-ASP_041)
+========================================================================
+
+Class Library project - creates a .dll that can be refernced in other projects
+
+Add a Reference - the FCL is split into tiny pieces, and you must reference
+that assemblies that contain the parts of the library you want to use.
+
+Right-click project's References node in SOlution Explorer, select Add Reference
+
+
+Accesssibility Modifers, Fields and Properties (CS-ASP_042)
+===========================================================
+http://v.gd/access
+
+Public - Class or member can be accessed by any code
+Private - Class or member can only be accessed by parent class
+Protected - Class or member can only be accessed by parent class or derived class
+Internal - Class or member can only be accessed by code inside the same assembly
+
+CLasses are internal by default
+Methods and properties are private by default
+
+Encapsulation - hiding implementation behind public interfaces, reduces couplig
+increases plug-ability / resusability, maintainbility, ect.
+
+private fields have two purposes:
+(1) reference to object or variable that used for internal implementation of class
+(2) hold the state of an object, backing field for public property
+
+propfull [tab] [tab]
+
+private int myField
+property int MyProperty
+{
+  get { return myField }
+  set {
+    if (value > 1000)
+      myField = value;
+      else
+      // tell the caller that they can't do this
+  }
+}
+
+Full property defination and private fields to control access to private fields / state of the object.
+
+prorpg [tab] [tab]
+public int MyProperty {get; private set;}
+Restricts setting of property to just the class ' internal implementation
 
 
 
