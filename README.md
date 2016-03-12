@@ -482,6 +482,66 @@ int myValue = 0;
 if(myMethod("Some Required Text", out myValue)) return "Hello World";
 
 
+Manipulating Strings - CS-ASP_035
+==================================
+// Escape double quotes
+string myString = "This is a double quote /".";
+
+// Accessing a specific char:
+myString[2];
+
+// StartsWith(). EndsWith(), Contains()
+// Check to see if a given string has a set of
+// characters beginng, end or somewhere inside
+// return true of false
+
+// IndexOf()
+// Find the index for one string inside of 
+// another string
+int myIndex = myString.IndexOf("howdy");
+
+// Insert(), Remove()
+// Inserts adds char starting a given index
+// Remove() removes a characters starting at a given index
+
+// Substring()
+// Retrivev charcters beginning at a given index
+// all the way through the length you input
+
+// Trim(), TrimStart(), TrimEnd()
+// Remove space characters both, or just the start 
+// or the end of the string
+
+
+//PadLeft(), PadRight()
+//allow you to specify a length for a string
+// and a character to pad the string with if its
+// length is less than the specified lenth
+
+myString = someValue.PadLeft(10, '#');
+//Notive that we're inputting a char, not a string
+// therfore we have to use a single quote ' not
+// a double quote
+
+// ToUpper, ToLower()
+// Important! Compare two strings regardless of
+// the case, because in C#, two strings with
+// different cases are NOT equal
+
+// Replace()
+// Replace every occurance of one string with
+// some other string.
+myString.Replace("$$$", myValue)
+
+// Split()
+// Take a string and split in into many strings
+// and store them ina string array
+string[] names = myString.Split(';')
+
+//Concatenating strings, immutability
+// StringBuilder - memory efficient way of concatenating strings
+
+
 Introduction to Classes and Objects (CS-ASP_036)
 =================================================
 
