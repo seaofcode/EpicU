@@ -13,5 +13,10 @@ namespace MegaCasinoChallenge
         {
 
         }
+
+        protected void pullButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
