@@ -43,5 +43,39 @@ namespace ChallengePostalCalculatorHelperMethods
         {
 
         }
+
+        private void calculateTotal()
+        {
+            // Do the values in the TextBoxes and CheckBoxes even exist?
+            if (!valuesExist()) return;
+
+            // Determine the Volume of the parcel
+            int volume; 
+            if (!tryGetVolume(out volume)) return;
+
+            // What is the multiplier for the parcel
+            double postageMultiplier = getPostageMultiplier();
+
+            // Calculate total cost
+            double cost = volume * postageMultiplier;
+
+            // Show the Result to the user
+            resultLabel.Text = String.Format("Your package will cost {0:C} to ship", cost);
+        }
+
+        private bool valuesExist()
+        {
+            return;
+        }
+
+        private bool tryGetVolume(out int volume)
+        {
+            return;
+        }
+
+        private double getPostageMultiplier()
+        {
+            return;
+        }
     }
 }
