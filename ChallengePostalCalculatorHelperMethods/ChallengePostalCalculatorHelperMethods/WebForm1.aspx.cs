@@ -65,7 +65,16 @@ namespace ChallengePostalCalculatorHelperMethods
 
         private bool valuesExist()
         {
-            return;
+            if (!airRadioButton.Checked
+                && !groundRadioButton.Checked
+                && !nextDayRadioButton.Checked)
+                return false;
+
+            if (widthTextBox.Text.Trim().Length == 0
+                || heightTextBox.Text.Trim().Length == 0)
+                return false;
+
+            return true;
         }
 
         private bool tryGetVolume(out int volume)
