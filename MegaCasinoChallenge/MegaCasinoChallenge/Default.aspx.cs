@@ -9,6 +9,8 @@ namespace MegaCasinoChallenge
 {
     public partial class Default : System.Web.UI.Page
     {
+        Random random = new Random();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -16,15 +18,25 @@ namespace MegaCasinoChallenge
 
         protected void pullButton_Click(object sender, EventArgs e)
         {
-            //When someone clicks the pull button display a random button in Image 1
-            string image = spinReel();
-            Image1.ImageUrl = "/Images/" + image + ".png";
+            pullLever();
+        }
+
+        private void pullLever()
+        {
+            string[] reels = new string[] {spinReel(), spinReel(), spinReel()};
+            displayImages(reels);
+        }
+
+        private void displayImages(string[] reels)
+        {
+            Image1.ImageUrl = "/Images/" + reels[0] + ".png";
+            Image2.ImageUrl = "/Images/" + reels[1] + ".png";
+            Image3.ImageUrl = "/Images/" + reels[2] + ".png";
         }
 
         private string spinReel()
         {
             string[] images = new string[] { "Bar", "Bell", "Cherry", "Clover", "Diamond", "HorseShoe", "Lemon", "Orange", "Plum", "Seven", "Strawberry", "Watermellon" };
-            Random random = new Random();
             return images[random.Next(11)];
         }
     }
