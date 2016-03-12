@@ -93,7 +93,10 @@ namespace ChallengePostalCalculatorHelperMethods
 
         private double getPostageMultiplier()
         {
-            return;
+            if (groundRadioButton.Checked) return .15;
+            else if (airRadioButton.Checked) return .25;
+            else if (nextDayRadioButton.Checked) return .45;
+            else return 0;
         }
     }
 }
