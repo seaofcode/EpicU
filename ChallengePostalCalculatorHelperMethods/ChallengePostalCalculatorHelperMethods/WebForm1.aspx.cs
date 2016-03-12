@@ -79,7 +79,16 @@ namespace ChallengePostalCalculatorHelperMethods
 
         private bool tryGetVolume(out int volume)
         {
-            return;
+            volume = 0;
+            int width, height, length = 0;
+
+            if (!int.TryParse(widthTextBox.Text.Trim(), out width)) return false;
+            if (!int.TryParse(heightTextBox.Text.Trim(), out height)) return false;
+            if (!int.TryParse(lengthTextBox.Text.Trim(), out length)) length = 1;
+
+            volume = width * height * length;
+
+            return true;
         }
 
         private double getPostageMultiplier()
