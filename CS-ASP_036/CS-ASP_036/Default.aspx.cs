@@ -17,6 +17,18 @@ namespace CS_ASP_036
             myNewCar.Model = "Cutless Supreme";
             myNewCar.Year = 1986;
             myNewCar.Color = "Silver";
+
+            double myMarketValue = determineMarketValue(myNewCar);
+
+            resultLabel.Text = String.Format("{0} - {1} - {2} - {3} - {4:C}", myNewCar.Make, myNewCar.Model, myNewCar.Year.ToString(), myNewCar.Color, myMarketValue);
+        }
+
+        private double determineMarketValue(Car car)
+        {
+            double carValue = 100.00;
+            // Write some code to go online and look up the car's value
+            // retrieve it in the carValue var;
+            return carValue;
         }
     }
 
