@@ -33,6 +33,16 @@ namespace MegaCasinoChallenge
             if (!int.TryParse(betTextBox.Text, out bet)) return;
             int winnings = pullLever(bet);
             displayResult(bet, winnings);
+            adjustPlayersMoney(bet, winnings);
+            displayPlayersMoney();
+        }
+
+        private void adjustPlayersMoney(int bet, int winnings)
+        {
+            int playersMoney = int.Parse(ViewState["PlayersMoney"].ToString());
+            playersMoney -= bet;
+            playersMoney += winnings;
+            ViewState["PlayersMoney"] = playersMoney;
         }
 
         private void displayResult(int bet, int winnings)
