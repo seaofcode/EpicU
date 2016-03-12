@@ -13,7 +13,11 @@ namespace MegaCasinoChallenge
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                string[] reels = new string[] {spinReel(), spinReel(), spinReel()};
+                displayImages(reels);
+            }
         }
 
         protected void pullButton_Click(object sender, EventArgs e)
