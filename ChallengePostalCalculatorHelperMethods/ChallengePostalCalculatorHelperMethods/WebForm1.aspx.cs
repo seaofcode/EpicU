@@ -16,32 +16,32 @@ namespace ChallengePostalCalculatorHelperMethods
 
         protected void width_TextChanged(object sender, EventArgs e)
         {
-
+            calculateTotal();
         }
 
         protected void lengthTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            calculateTotal();
         }
 
         protected void heightTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            calculateTotal();
         }
 
         protected void groundRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            calculateTotal();
         }
 
         protected void airRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            calculateTotal();
         }
 
         protected void nextDayRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            calculateTotal();
         }
 
         private void calculateTotal()
@@ -80,7 +80,9 @@ namespace ChallengePostalCalculatorHelperMethods
         private bool tryGetVolume(out int volume)
         {
             volume = 0;
-            int width, height, length = 0;
+            int width = 0;
+            int height = 0;
+            int length = 0;
 
             if (!int.TryParse(widthTextBox.Text.Trim(), out width)) return false;
             if (!int.TryParse(heightTextBox.Text.Trim(), out height)) return false;
