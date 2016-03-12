@@ -11,7 +11,31 @@ namespace ChallengeHeroMonsterClasses
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Character hero = new Character();
+            hero.Name = "Maximus";
+            hero.Health = 25;
+            hero.DamageMaximum = 15;
+            hero.AttackBonus = false;
 
+            Character monster = new Character();
+            monster.Name = "Balrog";
+            monster.Health = 50;
+            monster.DamageMaximum = 20;
+            monster.AttackBonus = true;
+
+            int damage = hero.Attack();
+            monster.Defend(damage);
+
+            damage = monster.Attack();
+            hero.Defend(damage);
+
+            printResults(hero);
+            printResults(monster);
+        }
+
+        private void printResults(Character character)
+        {
+            resultLabel.Text += String.Format("<p>Name: {0} Health: {1} DamageMaximum: {2} AttackBonus: {3}</p>", character.Name, character.Health, character.DamageMaximum, character.AttackBonus);
         }
     }
 
