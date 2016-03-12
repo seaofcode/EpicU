@@ -17,7 +17,14 @@ namespace MegaCasinoChallenge
             {
                 string[] reels = new string[] {spinReel(), spinReel(), spinReel()};
                 displayImages(reels);
+                ViewState.Add("PlayersMoney", 100);
+                displayPlayersMoney();
             }
+        }
+
+        private void displayPlayersMoney()
+        {
+            moneyLabel.Text = String.Format("Player's money: {0}", ViewState["PlayersMoney"]);
         }
 
         protected void pullButton_Click(object sender, EventArgs e)
