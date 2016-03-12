@@ -11,7 +11,12 @@ namespace CS_ASP_036
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Car myNewCar = new Car();
 
+            myNewCar.Make = "Oldsmobile";
+            myNewCar.Model = "Cutless Supreme";
+            myNewCar.Year = 1986;
+            myNewCar.Color = "Silver";
         }
     }
 
