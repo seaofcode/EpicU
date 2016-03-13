@@ -22,8 +22,8 @@ namespace ChallengePhunWithStrings
             
 
             // Reverse this sequence
-            //string names = "Luke,Leia,Han,Chewy";
-            /*
+            string names = "Luke,Leia,Han,Chewy";
+            
             string[] rebelScum = names.Split(',');
             string result = "";
             for (int i = rebelScum.Length - 1; i >= 0; i--)
@@ -31,8 +31,8 @@ namespace ChallengePhunWithStrings
                 result += rebelScum[i] + ",";
             }
             result = result.Remove(result.Length - 1, 1);
-            resultLabel.Text = "<br/> " + result;
-            */
+            resultLabel2.Text = "<br/> " + result;
+            
 
             /*string[] rebelScum = names.Split(',');
             string result = "";
