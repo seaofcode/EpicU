@@ -37,7 +37,7 @@ http://392-matt.vm.epicservers.com/ChallengePostalCalculatorHelperMethods/
 
 Phun With Strings
 
-http://392-matt.vm.epicservers.com/ChallengePostalCalculatorHelperMethods/
+http://392-matt.vm.epicservers.com/ChallengePhunWithStrings/
 
 
 Data Types (CS-ASP_007)
