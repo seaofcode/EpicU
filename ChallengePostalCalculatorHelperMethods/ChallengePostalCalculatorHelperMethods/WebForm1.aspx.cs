@@ -46,7 +46,7 @@ namespace ChallengePostalCalculatorHelperMethods
                 return false;
 
             if (widthTextBox.Text.Trim().Length == 0
-                || heightTextBox.Text.Trim().Length == 0)
+                || lengthTextBox.Text.Trim().Length == 0)
                 return false;
 
             return true;
@@ -55,12 +55,10 @@ namespace ChallengePostalCalculatorHelperMethods
         private bool tryGetVolume(out int volume)
         {
             volume = 0;
-            int width = 0;
-            int height = 0;
-            int length = 0;
+            int width, height, length = 0;
 
             if (!int.TryParse(widthTextBox.Text.Trim(), out width)) return false;
-            if (!int.TryParse(heightTextBox.Text.Trim(), out height)) return false;
+            if (!int.TryParse(lengthTextBox.Text.Trim(), out height)) return false;
             if (!int.TryParse(lengthTextBox.Text.Trim(), out length)) length = 1;
 
             volume = width * height * length;

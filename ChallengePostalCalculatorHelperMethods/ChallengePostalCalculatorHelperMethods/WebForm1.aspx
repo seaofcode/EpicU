@@ -13,11 +13,10 @@
             <asp:TextBox ID="widthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
-            Length: <asp:TextBox ID="lengthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
+            Height: <asp:TextBox ID="heightTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
-            Height:
-            <asp:TextBox ID="heightTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
+            Length: <asp:TextBox ID="lengthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
