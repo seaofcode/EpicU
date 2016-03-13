@@ -31,20 +31,20 @@ namespace ChallengePhunWithStrings
                 result += rebelScum[i] + ",";
             }
             result = result.Remove(result.Length - 1, 1);
-            resultLabel2.Text = "<br/> " + result;
+            resultLabel2.Text = result;
             
-
-            /*string[] rebelScum = names.Split(',');
-            string result = "";
+            // Split the characters with * chars
+            string[] rebelScum2 = names.Split(',');
+            string result2 = "";
             for (int i = 0; i < rebelScum.Length; i++)
             {
                 int padLeft = (14 - rebelScum[i].Length) / 2;
                 string temp = rebelScum[i].PadLeft(rebelScum[i].Length + padLeft, '*');
-                result += temp.PadRight(14, '*');
-                result += "<br />";
+                result2 += temp.PadRight(14, '*');
+                resultLabel3.Text = result2;
             }
-            */
-
+            
+            // Decode and format the message
             string puzzle = "NOW IS ZHEremove-me ZIME FOR ALL GOOD ME ZO COME ZO ZHE AID OF ZHEIR COUNTRY.";
             string removeMe = "remove-me";
             int index = puzzle.IndexOf(removeMe);
