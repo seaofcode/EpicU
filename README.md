@@ -31,6 +31,12 @@ Xmen Battle Count
 
 http://392-matt.vm.epicservers.com/ChallengeForXmenBattleCount/
 
+Postal Calculator Helper Methods
+
+http://392-matt.vm.epicservers.com/ChallengePostalCalculatorHelperMethods/
+
+
+
 Data Types (CS-ASP_007)
 =======================
 
