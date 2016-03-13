@@ -12,14 +12,14 @@ namespace ChallengePhunWithStrings
         protected void Page_Load(object sender, EventArgs e)
         {
             // Reverse your name
-            /*
+            
             string name = "Matthew Pearson";
 
             for (int i = name.Length - 1; i >= 0; i--)
             {
-                resultLabel.Text += name[i];
+                resultLabel1.Text += name[i];
             }
-            */
+            
 
             // Reverse this sequence
             //string names = "Luke,Leia,Han,Chewy";
@@ -54,7 +54,7 @@ namespace ChallengePhunWithStrings
             puzzle = puzzle.Remove(0, 1);
             puzzle = puzzle.Insert(0, "N");
 
-            resultLabel.Text = puzzle;
+            resultLabel4.Text = puzzle;
         }
     }
 }
