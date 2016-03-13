@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ChallengePostalCalculatorHelperMethods.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ChallengePostalCalculatorHelperMethods.Default" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,8 @@
             Height: <asp:TextBox ID="heightTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
-            Length: <asp:TextBox ID="lengthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
+            Length:
+            <asp:TextBox ID="lengthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
