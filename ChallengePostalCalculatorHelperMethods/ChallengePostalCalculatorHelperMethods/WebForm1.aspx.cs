@@ -14,32 +14,7 @@ namespace ChallengePostalCalculatorHelperMethods
 
         }
 
-        protected void width_TextChanged(object sender, EventArgs e)
-        {
-            calculateTotal();
-        }
-
-        protected void lengthTextBox_TextChanged(object sender, EventArgs e)
-        {
-            calculateTotal();
-        }
-
-        protected void heightTextBox_TextChanged(object sender, EventArgs e)
-        {
-            calculateTotal();
-        }
-
-        protected void groundRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            calculateTotal();
-        }
-
-        protected void airRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            calculateTotal();
-        }
-
-        protected void nextDayRadioButton_CheckedChanged(object sender, EventArgs e)
+        protected void event_Changed(object sender, EventArgs e)
         {
             calculateTotal();
         }

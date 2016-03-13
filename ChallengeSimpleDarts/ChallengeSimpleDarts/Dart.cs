@@ -8,6 +8,7 @@ namespace ChallengeSimpleDarts
     public class Dart
     {
         // Pass in an instance of Random()
+        Random random = new Random();
 
         // It has an equal chance of 1 - 20 or bullseye
         // For numbers 1-20 it has a 5% chance of landing in the outer that doubles the score

@@ -10,25 +10,25 @@
     <form id="form1" runat="server">
         Postal Calculator<p>
             Width:
-            <asp:TextBox ID="widthTextBox" runat="server" AutoPostBack="True" OnTextChanged="width_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="widthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
-            Length: <asp:TextBox ID="lengthTextBox" runat="server" AutoPostBack="True" OnTextChanged="lengthTextBox_TextChanged"></asp:TextBox>
+            Length: <asp:TextBox ID="lengthTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
             Height:
-            <asp:TextBox ID="heightTextBox" runat="server" AutoPostBack="True" OnTextChanged="heightTextBox_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="heightTextBox" runat="server" AutoPostBack="True" OnTextChanged="event_Changed"></asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
         <p>
-&nbsp;<asp:RadioButton ID="groundRadioButton" runat="server" AutoPostBack="True" Text="Ground" GroupName="Travel" OnCheckedChanged="groundRadioButton_CheckedChanged" />
+&nbsp;<asp:RadioButton ID="groundRadioButton" runat="server" AutoPostBack="True" Text="Ground" GroupName="Travel" OnCheckedChanged="event_Changed" />
         </p>
         <p>
-            <asp:RadioButton ID="airRadioButton" runat="server" AutoPostBack="True" Text="Air" GroupName="Travel" OnCheckedChanged="airRadioButton_CheckedChanged" />
+            <asp:RadioButton ID="airRadioButton" runat="server" AutoPostBack="True" Text="Air" GroupName="Travel" OnCheckedChanged="event_Changed" />
         </p>
         <p>
-            <asp:RadioButton ID="nextDayRadioButton" runat="server" AutoPostBack="True" Text="Next Day" GroupName="Travel" OnCheckedChanged="nextDayRadioButton_CheckedChanged" />
+            <asp:RadioButton ID="nextDayRadioButton" runat="server" AutoPostBack="True" Text="Next Day" GroupName="Travel" OnCheckedChanged="event_Changed" />
         </p>
         <p>
             &nbsp;</p>
