@@ -22,6 +22,13 @@ namespace MegaCasinoChallenge
             }
         }
 
+        private string spinReel()
+        {
+            string[] images = new string[] { "Bar", "Bell", "Cherry", "Clover", "Diamond", "HorseShoe", "Lemon", "Orange", "Plum", "Seven", "Strawberry", "Watermellon" };
+            return images[random.Next(11)];
+        }
+
+
         protected void pullButton_Click(object sender, EventArgs e)
         {
             int bet = 0;
@@ -93,18 +100,19 @@ namespace MegaCasinoChallenge
             return cherryCount;
         }
 
-        private string spinReel()
-        {
-            string[] images = new string[] { "Bar", "Bell", "Cherry", "Clover", "Diamond", "HorseShoe", "Lemon", "Orange", "Plum", "Seven", "Strawberry", "Watermellon" };
-            return images[random.Next(11)];
-        }
-
         private void adjustPlayersMoney(int bet, int winnings)
         {
             int playersMoney = int.Parse(ViewState["PlayersMoney"].ToString());
             playersMoney -= bet;
             playersMoney += winnings;
             ViewState["PlayersMoney"] = playersMoney;
+        }
+
+        private void displayImages(string[] reels)
+        {
+            Image1.ImageUrl = "/Image/" + reels[0] + ".png";
+            Image2.ImageUrl = "/Image/" + reels[1] + ".png";
+            Image3.ImageUrl = "/Image/" + reels[2] + ".png";
         }
 
         private void displayPlayersMoney()
@@ -118,13 +126,6 @@ namespace MegaCasinoChallenge
                 resultLabel.Text = String.Format("You bet {0:C} and won {1:C}", bet, winnings);
             else
                 resultLabel.Text = String.Format("Sorry you lost {0:C}, Better luck next time!", bet);
-        }
-
-        private void displayImages(string[] reels)
-        {
-            Image1.ImageUrl = "/Image/" + reels[0] + ".png";
-            Image2.ImageUrl = "/Image/" + reels[1] + ".png";
-            Image3.ImageUrl = "/Image/" + reels[2] + ".png";
-        }
+        }     
     }
 }
