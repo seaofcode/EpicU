@@ -32,14 +32,6 @@ namespace MegaCasinoChallenge
             displayPlayersMoney();
         }
 
-        private void adjustPlayersMoney(int bet, int winnings)
-        {
-            int playersMoney = int.Parse(ViewState["PlayersMoney"].ToString());
-            playersMoney -= bet;
-            playersMoney += winnings;
-            ViewState["PlayersMoney"] = playersMoney;
-        }
-
         private int pullLever(int bet)
         {
             string[] reels = new string[] { spinReel(), spinReel(), spinReel() };
@@ -105,6 +97,14 @@ namespace MegaCasinoChallenge
         {
             string[] images = new string[] { "Bar", "Bell", "Cherry", "Clover", "Diamond", "HorseShoe", "Lemon", "Orange", "Plum", "Seven", "Strawberry", "Watermellon" };
             return images[random.Next(11)];
+        }
+
+        private void adjustPlayersMoney(int bet, int winnings)
+        {
+            int playersMoney = int.Parse(ViewState["PlayersMoney"].ToString());
+            playersMoney -= bet;
+            playersMoney += winnings;
+            ViewState["PlayersMoney"] = playersMoney;
         }
 
         private void displayPlayersMoney()
