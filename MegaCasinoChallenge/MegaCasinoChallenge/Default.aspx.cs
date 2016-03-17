@@ -13,6 +13,8 @@ namespace MegaCasinoChallenge
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Initialization, set the array reels to 3 random images, show it
+            // Add PlayersMoney to ViewState and display it
             if (!Page.IsPostBack)
             {
                 string[] reels = new string[] {spinReel(), spinReel(), spinReel()};
@@ -22,13 +24,14 @@ namespace MegaCasinoChallenge
             }
         }
 
+        // Get a Randome Image from an array of images and return it 
         private string spinReel()
         {
             string[] images = new string[] { "Bar", "Bell", "Cherry", "Clover", "Diamond", "HorseShoe", "Lemon", "Orange", "Plum", "Seven", "Strawberry", "Watermellon" };
             return images[random.Next(11)];
         }
 
-
+        // Take bet and pass it into pullLever(), display results, calculate winnings if any then display it
         protected void pullButton_Click(object sender, EventArgs e)
         {
             int bet = 0;
@@ -56,7 +59,6 @@ namespace MegaCasinoChallenge
             return 0;
         }
 
-
         private bool isBar(string[] reels)
         {
             if (reels[0] == "Bar" || reels[1] == "Bar" || reels[2] == "Bar")
@@ -78,7 +80,6 @@ namespace MegaCasinoChallenge
             multiplier = determineCherryMultiplier(reels);
             if (multiplier > 0) return true;
             return false;
-           
         }
 
         private int determineCherryMultiplier(string[] reels)
