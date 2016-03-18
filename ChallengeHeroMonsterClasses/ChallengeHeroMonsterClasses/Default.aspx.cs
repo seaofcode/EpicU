@@ -11,7 +11,15 @@ namespace ChallengeHeroMonsterClasses
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            // Make two objects of class Character
+            Character hero = new Character();
+            // Name, Health, MaximumDamage and AttackBonus properties
+
+            // Hero's Combat Round
+
+            // Monster's Combat Rounds
+
+            // Print Results
         }
     }
 }
