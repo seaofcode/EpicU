@@ -42,7 +42,11 @@ http://392-matt.vm.epicservers.com/ChallengePhunWithStrings/
 Mega Casino Challenge
 
 
+Monster and Hero Challenge
+
+
 Simple Dart Game
+
 
 
 Challenge Student Courses
