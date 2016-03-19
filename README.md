@@ -39,6 +39,15 @@ Phun With Strings
 
 http://392-matt.vm.epicservers.com/ChallengePhunWithStrings/
 
+Mega Casino Challenge
+
+
+Simple Dart Game
+
+
+Challenge Student Courses
+
+
 
 Data Types (CS-ASP_007)
 =======================
@@ -757,7 +766,7 @@ Choose long, memorable, understandalbe names
 that convey meaning / intent.
 
 
-Static versus INstance members (CS-ASP_045)
+Static versus Instance members (CS-ASP_045)
 ==========================================
 Static members - no instance of the class required to call method
 
