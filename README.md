@@ -45,6 +45,7 @@ http://392-matt.vm.epicservers.com/MegaCasinoChallenge/
 
 Monster and Hero Challenge
 
+http://392-matt.vm.epicservers.com/ChallengeHeroMonsterClasses/
 
 Simple Dart Game
 
