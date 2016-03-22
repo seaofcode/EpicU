@@ -41,6 +41,7 @@ http://392-matt.vm.epicservers.com/ChallengePhunWithStrings/
 
 Mega Casino Challenge
 
+http://392-matt.vm.epicservers.com/MegaCasinoChallenge/
 
 Monster and Hero Challenge
 
