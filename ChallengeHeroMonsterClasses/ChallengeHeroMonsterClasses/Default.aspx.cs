@@ -16,7 +16,7 @@ namespace ChallengeHeroMonsterClasses
             hero.Name = "Maximus";
             hero.Health = 100;
             hero.MaximumDamage = 50;
-            hero.AttackBonus = false;
+            hero.AttackBonus = true;
 
             Character monster = new Character();
             monster.Name = "Balrog";
