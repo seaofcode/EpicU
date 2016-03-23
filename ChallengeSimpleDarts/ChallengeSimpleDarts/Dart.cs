@@ -7,21 +7,24 @@ namespace ChallengeSimpleDarts
 {
     public class Dart
     {
-        // Pass in an instance of Random()
-        Random random = new Random();
+        public int Score { get; set; }
+        public bool IsDouble { get; set; }
+        public bool IsTriple { get; set; }
 
-        // It has an equal chance of 1 - 20 or bullseye
-        // For numbers 1-20 it has a 5% chance of landing in the outer that doubles the score
-        // and a %5 chance of landing on the inner band which triples the score
+        private Random _random;
 
-        // For the bullseye (number 0) only has an outer and inner ring theres only a %5 
-        // you can hit the innerring
+        public Dart (Random random)
+        {
+            _random = random;
+        }
 
-        // Throw()
-        // {
-        //    populate properties representing the score
-        //    did it land on the inner or outer ring
-        //    or inner / outer bullseye
-        // }
+        public void Throw()
+        {
+            Score = _random.Next(0, 21);
+
+            int multiplier = _random.Next(0, 101);
+            if (multiplier > 95) IsTriple = true;
+            else if (multiplier > 90) IsDouble = true;
+        }
     }
 }

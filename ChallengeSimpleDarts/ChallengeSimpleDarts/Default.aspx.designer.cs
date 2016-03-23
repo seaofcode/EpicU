@@ -22,22 +22,13 @@ namespace ChallengeSimpleDarts {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// player1Label control.
+        /// resultLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label player1Label;
-        
-        /// <summary>
-        /// Player2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Player2Label;
+        protected global::System.Web.UI.WebControls.Label resultLabel;
         
         /// <summary>
         /// playButton control.

@@ -13,18 +13,14 @@ namespace ChallengeSimpleDarts
         {
 
         }
+
+        protected void playButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
-    class Game
-     {
-            // Two players will take turns throwing 3 darts each
-            // Their respective scores will be added to each score via Player's Score
-            // First player to reach 300 points wins
-            // If the dart lands on the double or triple band, multiply the score 2x or 3x respectively
-            // Display the both player's score and the winner on the web page
-            // 
-     }
-
+   
     class Score
     {
         // Contains a static method that will calculate the score for a dart throw
