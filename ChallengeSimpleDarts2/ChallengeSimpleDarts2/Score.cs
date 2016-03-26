@@ -18,6 +18,8 @@ namespace ChallengeSimpleDarts2
 
             if (dart.IsTriple && dart.Score == 0) score = 50;
             else if (dart.Score == 0) score = 25;
+
+            player.Score += score;
         }
     }
 }

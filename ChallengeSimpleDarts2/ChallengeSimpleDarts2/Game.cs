@@ -39,7 +39,7 @@ namespace ChallengeSimpleDarts2
         private string displayResults()
         {
             string result = String.Format("{0}: {1}</br>{2}: {3}", _player1.Name, _player1.Score, _player2.Name, _player2.Score);
-            return result += "Winner:" + (_player1.Score > _player2.Score ? _player1.Name : _player2.Name);
+            return result += "</br>Winner:" + (_player1.Score > _player2.Score ? _player1.Name : _player2.Name);
         }
 
         private void playRound(Player player)
@@ -48,7 +48,7 @@ namespace ChallengeSimpleDarts2
             {
                 Dart dart = new Dart(_random);
                 dart.Throw();
-                // TODO: Score the dart
+                Score.ScoreDart(player, dart);
             }
         }
     }
