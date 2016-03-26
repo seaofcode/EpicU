@@ -16,7 +16,9 @@ namespace ChallengeSimpleDarts2
 
         protected void okButton_Click(object sender, EventArgs e)
         {
-
+            Game game = new Game("Player1", "Player2");
+            string result = game.GameLoop();
+            resultLabel.Text = result;
         }
     }
 }

@@ -26,13 +26,20 @@ namespace ChallengeSimpleDarts2
         }
 
         // Run as long as each player is below the score 300
-        public void GameLoop()
+        public string GameLoop()
         {
             while (_player1.Score < 300 && _player2.Score < 300)
             {
                 playRound(_player1);
                 playRound(_player2);
             }
+            return displayResults();
+        }
+
+        private string displayResults()
+        {
+            string result = String.Format("{0}: {1}</br>{2}: {3}", _player1.Name, _player1.Score, _player2.Name, _player2.Score);
+            return result += "Winner:" + (_player1.Score > _player2.Score ? _player1.Name : _player2.Name);
         }
 
         private void playRound(Player player)
