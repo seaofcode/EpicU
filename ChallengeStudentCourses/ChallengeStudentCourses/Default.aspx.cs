@@ -25,7 +25,7 @@ namespace ChallengeStudentCourses
              * each Course.
              */
 
-            List<Course> course = new List<Course>()
+            List<Course> courses = new List<Course>()
             {
                 new Course() { CourseId = 1, Name = "Econ 101", Students = new List<Student>()
                 {
@@ -43,6 +43,15 @@ namespace ChallengeStudentCourses
                         new Student() { StudentId = 6, Name = "Jordy Backfall"}}
                 }      
             };
+
+            foreach (var course in courses)
+            {
+                resultLabel.Text += String.Format("</br>Course:{0} - {1}", course.CourseId, course.Name);
+                foreach (var student in course.Students)
+                {
+                    resultLabel.Text += String.Format("</br>&nbsp;&nbsp;Student: {0} - {1}", student.StudentId, student.Name);
+                }
+            }
         }
 
         protected void assignment2Button_Click(object sender, EventArgs e)
