@@ -29,7 +29,7 @@ namespace ChallengeStudentCourses
             {
                 new Course() { CourseId = 1, Name = "Econ 101", Students = new List<Student>()
                 {
-                        new Student() { StudentId = 1, Name = "Matthew Pearson"},
+                        new Student() { StudentId = 1, Name = "Matthew J Pearson"},
                         new Student() { StudentId = 2, Name = "Roman Baraowitz"}}
                 },
                 new Course() { CourseId = 2, Name = "Discrete Math", Students = new List<Student>()
@@ -63,9 +63,15 @@ namespace ChallengeStudentCourses
              * Object and Collection Initializers.  Then, iterate through
              * each student and print out to the web page each Student's
              * info and the Courses the Student is enrolled in.
-             */ 
+             */
+            Course course1 = new Course() { CourseId = 1, Name = "Algebra 3" };
+            Course course2 = new Course() { CourseId = 2, Name = "Phychology" };
+            Course course3 = new Course() { CourseId = 3, Name = "Business Law"};
 
-
+            Dictionary<int, Student> students = new Dictionary<int, Student>()
+            {
+                {1, new Student { StudentId = 1, Name = "Matthew J Pearson"} }
+            };    
         }
 
         protected void assignment3Button_Click(object sender, EventArgs e)
