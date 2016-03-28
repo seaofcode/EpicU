@@ -53,6 +53,7 @@ http://392-matt.vm.epicservers.com/ChallengeSimpleDarts2/
 
 Challenge Student Courses
 
+http://392-matt.vm.epicservers.com/ChallengeStudentCourses/
 
 
 Data Types (CS-ASP_007)
