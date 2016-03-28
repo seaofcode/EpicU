@@ -71,12 +71,19 @@ namespace ChallengeStudentCourses
         protected void assignment3Button_Click(object sender, EventArgs e)
         {
             Student student = new Student();
+            student.StudentId = 10;
+            student.Name = "Bete Makey";
             student.Enrollments = new List<Enrollment>()
             {
                  new Enrollment { Grade = 92, Course = new Course { CourseId = 1, Name = "Phychology 101" }},
                  new Enrollment { Grade = 96, Course = new Course { CourseId = 2, Name = "Project Management 342" }}
             };
 
+            resultLabel.Text += String.Format("</br>Student: {0} {1}", student.StudentId, student.Name);
+            foreach (var enrollment in student.Enrollments)
+            {
+                resultLabel.Text += String.Format("</br>Enrolled in: {0} - Grade: {1}", enrollment.Course.Name, enrollment.Grade);
+            }
         }
     }
 }
