@@ -16,15 +16,6 @@ namespace ChallengeStudentCourses
 
         protected void assignment1Button_Click(object sender, EventArgs e)
         {
-            /*
-             * Create a List of Courses (add three example Courses ...
-             * make up the details).  Each Course should have at least two
-             * Students enrolled in them.  Use Object and Collection
-             * Initializers.  Then, iterate through each Course and print
-             * out the Course's details and the Students that are enrolled in
-             * each Course.
-             */
-
             List<Course> courses = new List<Course>()
             {
                 new Course() { CourseId = 1, Name = "Econ 101", Students = new List<Student>()
@@ -55,23 +46,26 @@ namespace ChallengeStudentCourses
         }
 
         protected void assignment2Button_Click(object sender, EventArgs e)
-        {
-            /*
-             * Create a Dictionary of Students (add three example Students
-             * ... make up the details).  Use the StudentId as the 
-             * key.  Each student must be enrolled in two Courses.  Use
-             * Object and Collection Initializers.  Then, iterate through
-             * each student and print out to the web page each Student's
-             * info and the Courses the Student is enrolled in.
-             */
+        {        
             Course course1 = new Course() { CourseId = 1, Name = "Algebra 3" };
             Course course2 = new Course() { CourseId = 2, Name = "Phychology" };
             Course course3 = new Course() { CourseId = 3, Name = "Business Law"};
 
             Dictionary<int, Student> students = new Dictionary<int, Student>()
             {
-                {1, new Student { StudentId = 1, Name = "Matthew J Pearson"} }
-            };    
+                {1, new Student { StudentId = 1, Name = "Matthew J Pearson", Courses = new List<Course> { course1, course2} } },
+                {2, new Student { StudentId = 2, Name = "Lambeau Hutchings", Courses = new List<Course> { course2, course3} } },
+                {3, new Student { StudentId = 3, Name = "Lombardy Diego", Courses = new List<Course> {course1, course2 } } }
+            };
+
+            foreach (var student in students)
+            {
+                resultLabel.Text += String.Format("</br>{0} {1}", student.Value.StudentId, student.Value.Name);
+                foreach (var course in student.Value.Courses)
+                {
+                    resultLabel.Text += String.Format("</br>Course: &nbsp;&nbsp{0} {1}", course.Name, course.CourseId);
+                } 
+            }
         }
 
         protected void assignment3Button_Click(object sender, EventArgs e)
