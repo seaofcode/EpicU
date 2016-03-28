@@ -63,23 +63,19 @@ namespace ChallengeStudentCourses
                 resultLabel.Text += String.Format("</br>{0} {1}", student.Value.StudentId, student.Value.Name);
                 foreach (var course in student.Value.Courses)
                 {
-                    resultLabel.Text += String.Format("</br>Course: &nbsp;&nbsp{0} {1}", course.Name, course.CourseId);
+                    resultLabel.Text += String.Format("</br>Course: &nbsp;&nbsp;{0} {1}", course.Name, course.CourseId);
                 } 
             }
         }
 
         protected void assignment3Button_Click(object sender, EventArgs e)
         {
-            /*
-             * We need to keep track of each Student's grade (0 to 100) in a 
-             * particular Course.  This means at a minimum, you'll need to add 
-             * another class, and depending on your implementation, you will 
-             * probably need to modify the existing classes to accommodate this 
-             * new requirement.  Give each Student a grade in each Course they
-             * are enrolled in (make up the data).  Then, for each student, 
-             * print out each Course they are enrolled in and their grade.
-             */ 
-
+            Student student = new Student();
+            student.Enrollments = new List<Enrollment>()
+            {
+                 new Enrollment { Grade = 92, Course = new Course { CourseId = 1, Name = "Phychology 101" }},
+                 new Enrollment { Grade = 96, Course = new Course { CourseId = 2, Name = "Project Management 342" }}
+            };
 
         }
     }
