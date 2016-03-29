@@ -16,7 +16,8 @@ namespace MegaChallengeWar
 
         protected void playButton_Click(object sender, EventArgs e)
         {
-           
+            Game game = new Game("Player1","Player2");
+            game.Play();
         }
     }
 }
