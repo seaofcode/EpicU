@@ -7,5 +7,7 @@ namespace MegaChallengeWar
 {
     public class Card
     {
+        public string Suit { get; set; }
+        public string Kind { get; set; }
     }
 }
