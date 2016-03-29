@@ -11,10 +11,10 @@ namespace MegaChallengeWar
         private Player _player1;
         private Player _player2;
 
-        public Game(string player1, string player2)
+        public Game(string player1Name, string player2Name)
         {
-            _player1 = new Player() { Name = player1.Name};
-            _player2 = new Player() { Name = player2.Name };
+            _player1 = new Player() { Name = player1Name};
+            _player2 = new Player() { Name = player2Name };
         }
 
         public string Play()
