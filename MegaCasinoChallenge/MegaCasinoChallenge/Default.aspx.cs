@@ -111,9 +111,9 @@ namespace MegaCasinoChallenge
 
         private void displayImages(string[] reels)
         {
-            Image1.ImageUrl = "/Image/" + reels[0] + ".png";
-            Image2.ImageUrl = "/Image/" + reels[1] + ".png";
-            Image3.ImageUrl = "/Image/" + reels[2] + ".png";
+            Image1.ImageUrl = "Image/" + reels[0] + ".png";
+            Image2.ImageUrl = "Image/" + reels[1] + ".png";
+            Image3.ImageUrl = "Image/" + reels[2] + ".png";
         }
 
         private void displayPlayersMoney()

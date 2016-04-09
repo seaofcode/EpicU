@@ -21,6 +21,12 @@ namespace MegaChallengeWar
         {
             Deck deck = new Deck();
             return deck.Deal(_player1, _player2);
+
+            while (_player1.Cards.Count != 0 && _player2.Cards.Count != 0)
+            {
+                Card player1Card = _player1.Cards.ElementAt(0);
+                Card player2Card = _player2.Cards.ElementAt(0);
+            }
         }
     }
 }
