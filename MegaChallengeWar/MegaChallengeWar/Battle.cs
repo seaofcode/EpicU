@@ -14,14 +14,16 @@ namespace MegaChallengeWar
         public Battle()
         {
             _bounty = new List<Card>();
+            _sb = new StringBuilder();
         }
 
-        public void PerformBattle(Player player1, Player player2)
+        public string PerformBattle(Player player1, Player player2)
         {
             Card player1Card = getCard(player1);
             Card player2Card = getCard(player2);
 
             performEvaluation(player1, player2, player1Card, player2Card);
+            return _sb.ToString();
         }
 
         private Card getCard(Player player)
