@@ -26,6 +26,8 @@ namespace MegaChallengeWar
             int round = 0;
             while (_player1.Cards.Count != 0 && _player2.Cards.Count != 0)
             {
+                Battle battle = new Battle();
+                battle.PerformBattle(_player1, _player2);
               
                 round++;
                 if (round > 20)
