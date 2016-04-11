@@ -7,6 +7,16 @@ namespace MegaChallengeWar
 {
     public class Battle
     {
+
+        public void PerformBattle(Player player1, Player player2)
+        {
+            Card player1Card = getCard(player1);
+            Card player2Card = getCard(player2);
+
+            performEvaluation(player1, player2, player1Card, player2Card);
+
+        }
+
         private Card getCard(Player player)
         {
             Card card = player.Cards.ElementAt(0);

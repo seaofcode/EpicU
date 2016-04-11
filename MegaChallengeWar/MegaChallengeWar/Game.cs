@@ -28,11 +28,7 @@ namespace MegaChallengeWar
             int round = 0;
             while (_player1.Cards.Count != 0 && _player2.Cards.Count != 0)
             {
-                Card player1Card = getCard(_player1);
-                Card player2Card = getCard(_player2);
-
-                performEvaluation(_player1, _player2, player1Card, player2Card);
-
+              
                 round++;
                 if (round > 20)
                     break;
@@ -40,9 +36,6 @@ namespace MegaChallengeWar
             result += determineWinner();
             return result;
         }
-
-
-       
 
         private string determineWinner()
         {
