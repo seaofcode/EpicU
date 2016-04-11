@@ -20,7 +20,6 @@ namespace MegaChallengeWar
             Card player2Card = getCard(player2);
 
             performEvaluation(player1, player2, player1Card, player2Card);
-
         }
 
         private Card getCard(Player player)
@@ -33,11 +32,26 @@ namespace MegaChallengeWar
 
         private void performEvaluation(Player player1, Player player2, Card card1, Card card2)
         {
+            if (card1.CardValue() == card2.CardValue())
+                war(player1, player2);
             if (card1.CardValue() > card2.CardValue())
                 player1.Cards.AddRange(_bounty);
             else
                 player2.Cards.AddRange(_bounty);
             _bounty.Clear();
+        }
+
+        private void war(Player player1, Player player2)
+        {
+            getCard(player1);
+            Card warCard1 = getCard(player1);
+            getCard(player1);
+
+            getCard(player2);
+            Card warCard2 = getCard(player2);
+            getCard(player2);
+
+            performEvaluation(player1, player2, warCard1, warCard2);
         }
     }
 }
