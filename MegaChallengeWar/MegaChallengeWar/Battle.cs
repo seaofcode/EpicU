@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 
 namespace MegaChallengeWar
@@ -8,6 +9,7 @@ namespace MegaChallengeWar
     public class Battle
     {
         private List<Card> _bounty;
+        private StringBuilder _sb;
 
         public Battle()
         {
@@ -52,6 +54,31 @@ namespace MegaChallengeWar
             getCard(player2);
 
             performEvaluation(player1, player2, warCard1, warCard2);
+        }
+
+        private void displayBattleCards(Card card1, Card card2)
+        {
+            _sb.Append("<br/>Battle Cards: ");
+            _sb.Append(card1.Kind);
+            _sb.Append(" of ");
+            _sb.Append(card1.Suit);
+            _sb.Append(" versus ");
+            _sb.Append(card2.Kind);
+            _sb.Append(" of ");
+            _sb.Append(card2.Suit);
+        }
+
+        private void displayBountyCards()
+        {
+            _sb.Append("<br/>Bounty ...");
+
+            foreach (var card in _bounty)
+            {
+                _sb.Append("<br/>&nbsp;&nbsp;&nbsp;&nbsp;");
+                _sb.Append(card.Kind);
+                _sb.Append(" of ");
+                _sb.Append(card.Suit);
+            }
         }
     }
 }
