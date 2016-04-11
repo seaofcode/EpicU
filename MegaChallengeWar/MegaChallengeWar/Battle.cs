@@ -7,6 +7,12 @@ namespace MegaChallengeWar
 {
     public class Battle
     {
+        private List<Card> _bounty;
+
+        public Battle()
+        {
+            _bounty = new List<Card>();
+        }
 
         public void PerformBattle(Player player1, Player player2)
         {

@@ -10,14 +10,12 @@ namespace MegaChallengeWar
     {
         private Player _player1;
         private Player _player2;
-        private List<Card> _bounty;
 
 
         public Game(string player1Name, string player2Name)
         {
             _player1 = new Player() { Name = player1Name};
             _player2 = new Player() { Name = player2Name };
-            _bounty = new List<Card>();
         }
 
         public string Play()
