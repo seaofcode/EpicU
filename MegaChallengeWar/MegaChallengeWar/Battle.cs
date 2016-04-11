@@ -34,12 +34,20 @@ namespace MegaChallengeWar
 
         private void performEvaluation(Player player1, Player player2, Card card1, Card card2)
         {
+            displayBattleCards(card1, card2);
             if (card1.CardValue() == card2.CardValue())
                 war(player1, player2);
             if (card1.CardValue() > card2.CardValue())
-                player1.Cards.AddRange(_bounty);
+                awardWinner(player1);
             else
-                player2.Cards.AddRange(_bounty);
+                awardWinner(player2);
+            _bounty.Clear();
+        }
+
+        private void awardWinner(Player player)
+        {
+            displayBountyCards();
+            player.Cards.AddRange(_bounty);
             _bounty.Clear();
         }
 
