@@ -23,7 +23,7 @@ namespace MegaChallengeWar
         public string Play()
         {
             Deck deck = new Deck();
-            return deck.Deal(_player1, _player2);
+            string result = deck.Deal(_player1, _player2);
 
             int round = 0;
             while (_player1.Cards.Count != 0 && _player2.Cards.Count != 0)
@@ -37,7 +37,7 @@ namespace MegaChallengeWar
                 if (round > 20)
                     break;
             }
-            string result = determineWinner();
+            result += determineWinner();
             return result;
         }
 
@@ -56,6 +56,7 @@ namespace MegaChallengeWar
                 player1.Cards.AddRange(_bounty);
             else
                 player2.Cards.AddRange(_bounty);
+            _bounty.Clear();
         }
 
         private string determineWinner()
