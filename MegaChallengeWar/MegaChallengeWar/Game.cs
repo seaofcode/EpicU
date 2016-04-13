@@ -27,7 +27,7 @@ namespace MegaChallengeWar
             while (_player1.Cards.Count != 0 && _player2.Cards.Count != 0)
             {
                 Battle battle = new Battle();
-                battle.PerformBattle(_player1, _player2);
+                result += battle.PerformBattle(_player1, _player2);
               
                 round++;
                 if (round > 20)
@@ -41,7 +41,7 @@ namespace MegaChallengeWar
         {
             string result = "";
             if (_player1.Cards.Count > _player2.Cards.Count)
-                result += "<br/> Player 1 Wins";
+                result += "<br/><span>Player 1 Wins</span>";
             else
                 result += "<br/> Player 2 Wins";
             
