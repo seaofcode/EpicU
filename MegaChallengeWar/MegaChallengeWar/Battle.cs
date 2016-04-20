@@ -43,11 +43,11 @@ namespace MegaChallengeWar
                 awardWinner(player1);
             else
                 awardWinner(player2);
-            _bounty.Clear();
         }
 
         private void awardWinner(Player player)
         {
+            if (_bounty.Count == 0) return;
             displayBountyCards();
             player.Cards.AddRange(_bounty);
             _bounty.Clear();
