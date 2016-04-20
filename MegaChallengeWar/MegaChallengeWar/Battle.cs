@@ -51,6 +51,10 @@ namespace MegaChallengeWar
             displayBountyCards();
             player.Cards.AddRange(_bounty);
             _bounty.Clear();
+
+            _sb.Append("<br/><strong>");
+            _sb.Append(player.Name);
+            _sb.Append(" wins!</strong><br/>");
         }
 
         private void war(Player player1, Player player2)
