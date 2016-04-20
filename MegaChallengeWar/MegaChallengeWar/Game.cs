@@ -21,8 +21,11 @@ namespace MegaChallengeWar
         public string Play()
         {
             Deck deck = new Deck();
-            string result = deck.Deal(_player1, _player2);
 
+            string result = "<h3>Dealing Cards...</h3>";
+            result += deck.Deal(_player1, _player2);
+
+            result += "<h3>Begin Battle...</h3>";
             int round = 0;
             while (_player1.Cards.Count != 0 && _player2.Cards.Count != 0)
             {
