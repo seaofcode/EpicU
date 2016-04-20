@@ -59,6 +59,7 @@ namespace MegaChallengeWar
 
         private void war(Player player1, Player player2)
         {
+            _sb.Append("<br/>****************WAR***************<br/>");
             getCard(player1);
             Card warCard1 = getCard(player1);
             getCard(player1);
