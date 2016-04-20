@@ -41,11 +41,11 @@ namespace MegaChallengeWar
         {
             string result = "";
             if (_player1.Cards.Count > _player2.Cards.Count)
-                result += "<br/><span>Player 1 Wins</span>";
+                result += "<br/><span style='color:red;font-weight:bolder;'>Player 1 Wins</span>";
             else
-                result += "<br/> Player 2 Wins";
+                result += "<br/><span style='color:blue;font-weight:bolder;'>Player 2 Wins</span>";
             
-            result += "<br/>Player1: " + _player1.Cards.Count + " Player2: " + _player2.Cards.Count;
+            result += "<br/><span style='color:red;font-weight:bolder;'>Player1: " + _player1.Cards.Count + "</span>" + "</br><span style='color:blue;font-weight:bolder;'>Player2: " + _player2.Cards.Count + "</span>";
             return result;
         }
     }
