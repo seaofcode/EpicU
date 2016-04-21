@@ -1,4 +1,4 @@
-﻿
+﻿@model List<HelloMVC.Models.Car>
 @{
     ViewBag.Title = "Index";
 }
@@ -6,4 +6,9 @@
 <h1>@ViewBag.MatthewCreatedThis</h1>
 <h2>This the Index Page</h2>
 <p>It is referenced in the RenderBody portion or the Layout</p>
+
+@foreach (var car in Model)
+{
+    <p>@car.ID - @car.Make - @car.Model</p>
+}
 
