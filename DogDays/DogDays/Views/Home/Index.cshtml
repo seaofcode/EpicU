@@ -5,3 +5,22 @@
 
 <h2>List of Dogs</h2>
 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Dog Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dog in Model)
+        {
+            <tr>
+                <td>@dog.DogID</td>
+                <td>@dog.DogName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
